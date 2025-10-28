@@ -1,4 +1,4 @@
-package main;
+package dogapi;
 
 import java.util.*;
 
@@ -22,7 +22,7 @@ public class CachingBreedFetcher implements BreedFetcher {
     }
 
     @Override
-    public List<String> getSubBreeds(String breed) {
+    public List<String> getSubBreeds(String breed) throws BreedNotFoundException {
         String key = breed == null ? null : breed.toLowerCase(Locale.ROOT);
         if (key != null && cache.containsKey(key)) {
             return cache.get(key);
