@@ -1,4 +1,4 @@
-package dogapi;
+package test;
 
 import org.junit.jupiter.api.Test;
 
